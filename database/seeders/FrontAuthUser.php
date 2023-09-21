@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+// use App\Http\Requests\UserRegisterPost;
 
 class FrontAuthUser extends Seeder
 {
@@ -17,10 +18,10 @@ class FrontAuthUser extends Seeder
     {
         //
         DB::table('users')->insert([
-            'name' => 'テストユーザ',
+            'name' => 'テストユーザー',
             'email' => 'hoge@example.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
-            'password' => Hash::make('pass'),
+            'password'=>Hash::make('pass'),
         ]);
     }
 }
